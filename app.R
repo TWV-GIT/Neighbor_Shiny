@@ -119,7 +119,7 @@ server <- function(input, output) {
       neighbors_sampled <- sum(calc_neighbors(c(x, y), dt_all, radius)) - 1 # -1 to remove self
       neighbors_background <- sum(calc_neighbors(c(x, y), dt_dist, radius))
     
-      ratio <- neighbors_sampled/((neighbors_background +1)/sample_ratio) # Based on formula of Fabio A.
+      ratio <- neighbors_sampled/((neighbors_background +1)/input$sample_ratio) # Based on formula of Fabio A.
       
       # Calculate hypergeometric test p-value (models sampling without replacement)
       pvalue <- tryCatch({
