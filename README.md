@@ -27,7 +27,11 @@ Based on the chosen parameters, a (semi)random two-dimensional background CDR3 d
 
 Next, background and 'sampled' CDR3s are simulated based on the 'Number of sampled CDR3s' and 'Ratio' parameters. The sampled CDR3s are generated from all background clusters plus a specified number of convergent clusters. The centres of the two cluster types are indicated. For each sampled CDR3, the logratio is calculated with the formula:
 
-$$\text{logratio} = \frac{\text{sampled_CDR3s}}{\left(\frac{\text{background_CDR3s} + 1}{sample\_ratio}\right)}$$
+$$
+\text{logratio} = \frac{\text{sampled}}{\left(\frac{\text{background} + 1}{\text{ratio}}\right)}
+$$
+
+Where 'sampled' is the predefined number of sampled CDR3s, 'background' is the number of background CDR3s and 'ratio' is the predefined ratio between the two counts.
 
 The sample and background CDR3s and are plotted on the same dimensions. The sample CDR3s are colored based on their logratio values.
 
